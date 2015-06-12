@@ -20,7 +20,7 @@ Example: http://joebew42.github.io/events.xml or simply http://joebew42.github.i
 
 In this example I can maintain my events stream with a version control system.
 
-## Proof of concept
+## Example of data format
 
 We are going to define a structured format that can be used to easily describe an activity.
 The candidates are XML (with an optional XSLT support for content representation formatting),
@@ -54,3 +54,19 @@ JSON or RDF.
 ```
 
 ### RDF
+
+Here I need help. The event should be expressed with the proper [Action type](http://schema.org/Action).
+Sadly, the action itself is not sufficient to describe the Event. We have to express
+references too:
+
+```
+<"Joe":Person> <ReadingAction:Predicate> <"My first book ever !":Book>
+Other relations that link the Book with References ???
+```
+
+Anyway, the RDF format is not designed to be Human Readable. If we want to make event
+semantically valid we should translate it from XML or JSON to RDF. This could be optional.
+
+If you are reading this section and know about RDF, I'll appreciate to see an example
+of an event expressed in RDF format. Maybe an action on schema.org already exist but
+I found nothing about.

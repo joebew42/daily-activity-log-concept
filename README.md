@@ -29,14 +29,14 @@ JSON or RDF.
 ### XML
 
 ```
-<stream>
+<events>
     <event date="YYYY-MM-DD" action="reading" on="My first book ever !">
         <references>
             <reference src="http://somewhere.local/resource.html" type="source" />
             <reference src="http://somewhere.local/resource.html" type="note" />
         </references>
     </event>
-</stream>
+</events>
 ```
 
 ### JSON

@@ -30,7 +30,8 @@ JSON or RDF.
 
 ```
 <events>
-    <event date="YYYY-MM-DD" action="reading" on="My first book ever !">
+    <event date="YYYY-MM-DD">
+        <action type="reading">My first book ever !</action>
         <references>
             <reference src="http://somewhere.local/resource.html" type="source" />
             <reference src="http://somewhere.local/resource.html" type="note" />

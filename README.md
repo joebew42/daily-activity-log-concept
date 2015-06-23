@@ -21,7 +21,7 @@ You have to push your regular updates in `events.xml` and then everyone could ac
 
 We are going to define a structured format that can be used to easily describe an activity. The candidates are XML (with an optional XSLT support for content representation formatting), JSON or RDF.
 
-The basic idea is that each activity should describes and action performed on a object. In addition we will give some useful (but optional) information such as references about the activity (i.e. URLs, notes or whatever).
+The basic idea is that each activity should describe an action performed on a object. In addition we will give some useful (but optional) information such as references about the activity (i.e. URLs, notes or whatever).
 
 ### XML
 

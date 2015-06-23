@@ -1,4 +1,4 @@
-# Daily Activity Log
+# Daily Activity Log Concept
 
 The aim of this project is to produce a standard that gives to people an easy way to share and aggregates personal activity log around the Internet. You can think it such a sort of decentralized microblog platform without a platform: _"A microblog platform-less"_
 
@@ -25,7 +25,7 @@ The basic idea is that each activity must describe a the action that we perform 
 
 ### XML
 
-The XML format is the first candidate for a real application usage. If you want to give it a try, checkout the ready-to-go project [_daily-activity-log_](http://github.com/joebew42/daily-activity-log/), fork it to your github page repository and start push updates on `events.xml` file, improve the `css` or try different layout by modifying the `xsl`.
+The XML format is the first candidate for a real application usage. If you want to give it a try, checkout the ready-to-go project [**daily-activity-log**](http://github.com/joebew42/daily-activity-log/), fork it to your github page repository and start push updates on `events.xml` file, improve the `css` or try different layout by modifying the `xsl`.
 
 ```
 <events>
@@ -65,3 +65,7 @@ Other relations that link the Book with References ???
 Anyway, the RDF format is not designed to be Human Readable. If we want to make event semantically valid we should translate it from XML or JSON to RDF. This could be optional.
 
 If you are reading this section and know about RDF, I'll appreciate to see an example of an event expressed in RDF format. Maybe an action on schema.org already exist but I found nothing about.
+
+### How to contribute
+
+If you want to talk about this format, please open an issue. You are welcome!

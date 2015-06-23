@@ -1,32 +1,31 @@
-# Events Stream Log
+# Daily Activity Log
 
-## Problem
+The aim of this project is to produce a standard that gives to people an easy way to share and aggregates personal activity log around the Internet. You can think it such a sort of decentralized microblog platform without a platform: _"A microblog platform-less"_
 
-I would like to have a mechanism that allows me to browse the history of my personal events stream.
-What is an *Events Stream*? An Events Stream is an ordered list of events, in which each event can
-describe an action that I've done during the day (e.g. Studying a paragraph of a book, Reading a book,
-Writing a new blog post, Thinking about a specific topic, and so on). By querying my events stream log,
-I (or other people) can stay updated about different kind of topic or activities. Better, I can go back
-in time through my events stream to find useful information believed lost.
+## WTF!? Platform-less!
 
-## Idea
+_Platform-less_ because you do not need a proprietary format platform in order to create, manage and share your daily activity log (like [_Wordpress_](https://wordpress.org/), [_Ghost_](https://github.com/tryghost/Ghost), [_Jekyll_](http://jekyllrb.com/) or others). You can manage your daily activity log through an XML (or JSON?) file that have to respect a format that is more human readable as possible, style it with CSS/XSLT rules and push your daily updates to your github pages repository.
 
-The idea is that everyone can have a personal events stream log, in which (daily) can be feeded with
-events. Is not about a centralized social network platform with proprietary format or lock-in logics.
-Is something about a standard. What I have to do is to publish a file (in a Human Readable format) and
-share the URL with who wants to follows my stream of events.
+A typical directory structure of your *platform-less microblog* could be:
 
-Example: http://joebew42.github.io/events.xml or simply http://joebew42.github.io
+```
+/
+/events.xml
+/events.xsl
+/events.css
+```
 
-In this example I can maintain my events stream with a version control system.
+You have to push your regular updates in `events.xml` and then everyone could access them by surfing your [_github page_](https://pages.github.com/) (`http://username.github.io/events.xml`) or aggregates contents with a custom made client.
 
-## Example of data format
+## Data format
 
-We are going to define a structured format that can be used to easily describe an activity.
-The candidates are XML (with an optional XSLT support for content representation formatting),
-JSON or RDF.
+We are going to define a structured format that can be used to easily describe an activity. The candidates are XML (with an optional XSLT support for content representation formatting), JSON or RDF.
+
+The basic idea is that each activity must describe a the action that we perform on a object. In addition we will give some useful (but optional) information such as references about the activity (such as URL, notes or whatever).
 
 ### XML
+
+The XML format is the first candidate for a real application usage. If you want to give it a try, checkout the ready-to-go project [_daily-activity-log_](http://github.com/joebew42/daily-activity-log/), fork it to your github page repository and start push updates on `events.xml` file, improve the `css` or try different layout by modifying the `xsl`.
 
 ```
 <events>
@@ -56,18 +55,13 @@ JSON or RDF.
 
 ### RDF
 
-Here I need help. The event should be expressed with the proper [Action type](http://schema.org/Action).
-Sadly, the action itself is not sufficient to describe the Event. We have to express
-references too:
+Here I need help. The event should be expressed with the proper [Action type](http://schema.org/Action). Sadly, the action itself is not sufficient to describe the Event. We have to express references too:
 
 ```
 <"Joe":Person> <ReadingAction:Predicate> <"My first book ever !":Book>
 Other relations that link the Book with References ???
 ```
 
-Anyway, the RDF format is not designed to be Human Readable. If we want to make event
-semantically valid we should translate it from XML or JSON to RDF. This could be optional.
+Anyway, the RDF format is not designed to be Human Readable. If we want to make event semantically valid we should translate it from XML or JSON to RDF. This could be optional.
 
-If you are reading this section and know about RDF, I'll appreciate to see an example
-of an event expressed in RDF format. Maybe an action on schema.org already exist but
-I found nothing about.
+If you are reading this section and know about RDF, I'll appreciate to see an example of an event expressed in RDF format. Maybe an action on schema.org already exist but I found nothing about.

@@ -1,6 +1,6 @@
 # Daily Activity Log Concept
 
-The aim of this project is to produce a standard that gives to people an easy way to share and aggregates personal activity log around the Internet. You can think it such a sort of decentralized microblog platform without a platform: _"A microblog platform-less"_
+The aim of this project is to produce a standard that gives to people an easy way to share and aggregate their activities around the Internet (i.e. studies, projects development, notes, or whatever we think is useful keep track). You can think it such a sort of decentralized microblog platform without a platform: _"A microblog platform-less"_
 
 ## WTF!? Platform-less!
 
